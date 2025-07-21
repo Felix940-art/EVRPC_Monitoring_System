@@ -22,15 +22,16 @@ Partial Class Login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Login))
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Label4 = New Label()
         PictureBox2 = New PictureBox()
         PictureBox1 = New PictureBox()
@@ -38,10 +39,12 @@ Partial Class Login
         Label3 = New Label()
         Label1 = New Label()
         Guna2ShadowPanel1 = New Guna.UI2.WinForms.Guna2ShadowPanel()
+        show_password = New CheckBox()
+        Textbox_Password = New Guna.UI2.WinForms.Guna2TextBox()
+        Textbox_Username = New Guna.UI2.WinForms.Guna2TextBox()
         cancel_btn = New Guna.UI2.WinForms.Guna2GradientButton()
         login_btn = New Guna.UI2.WinForms.Guna2GradientButton()
-        Guna2TextBox1 = New Guna.UI2.WinForms.Guna2TextBox()
-        Guna2TextBox2 = New Guna.UI2.WinForms.Guna2TextBox()
+        Guna2ShadowForm1 = New Guna.UI2.WinForms.Guna2ShadowForm(components)
         CType(PictureBox2, ComponentModel.ISupportInitialize).BeginInit()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         Guna2ShadowPanel1.SuspendLayout()
@@ -118,8 +121,9 @@ Partial Class Login
         ' Guna2ShadowPanel1
         ' 
         Guna2ShadowPanel1.BackColor = Color.Transparent
-        Guna2ShadowPanel1.Controls.Add(Guna2TextBox2)
-        Guna2ShadowPanel1.Controls.Add(Guna2TextBox1)
+        Guna2ShadowPanel1.Controls.Add(show_password)
+        Guna2ShadowPanel1.Controls.Add(Textbox_Password)
+        Guna2ShadowPanel1.Controls.Add(Textbox_Username)
         Guna2ShadowPanel1.Controls.Add(cancel_btn)
         Guna2ShadowPanel1.Controls.Add(login_btn)
         Guna2ShadowPanel1.Controls.Add(Label3)
@@ -134,6 +138,68 @@ Partial Class Login
         Guna2ShadowPanel1.ShadowColor = Color.Black
         Guna2ShadowPanel1.Size = New Size(373, 415)
         Guna2ShadowPanel1.TabIndex = 2
+        ' 
+        ' show_password
+        ' 
+        show_password.AutoSize = True
+        show_password.ForeColor = Color.RosyBrown
+        show_password.Location = New Point(84, 211)
+        show_password.Name = "show_password"
+        show_password.Size = New Size(132, 24)
+        show_password.TabIndex = 3
+        show_password.Text = "Show Password"
+        show_password.UseVisualStyleBackColor = True
+        ' 
+        ' Textbox_Password
+        ' 
+        Textbox_Password.BorderColor = SystemColors.ActiveBorder
+        Textbox_Password.BorderRadius = 3
+        Textbox_Password.BorderThickness = 0
+        Textbox_Password.CustomizableEdges = CustomizableEdges1
+        Textbox_Password.DefaultText = ""
+        Textbox_Password.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        Textbox_Password.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        Textbox_Password.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Textbox_Password.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Textbox_Password.FillColor = SystemColors.ControlDark
+        Textbox_Password.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Textbox_Password.Font = New Font("Segoe UI", 9F)
+        Textbox_Password.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Textbox_Password.Location = New Point(84, 177)
+        Textbox_Password.Margin = New Padding(3, 4, 3, 4)
+        Textbox_Password.Name = "Textbox_Password"
+        Textbox_Password.PlaceholderForeColor = Color.Coral
+        Textbox_Password.PlaceholderText = ""
+        Textbox_Password.SelectedText = ""
+        Textbox_Password.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Textbox_Password.Size = New Size(235, 27)
+        Textbox_Password.TabIndex = 2
+        Textbox_Password.UseSystemPasswordChar = True
+        ' 
+        ' Textbox_Username
+        ' 
+        Textbox_Username.BorderColor = SystemColors.ActiveBorder
+        Textbox_Username.BorderRadius = 3
+        Textbox_Username.BorderThickness = 0
+        Textbox_Username.CustomizableEdges = CustomizableEdges3
+        Textbox_Username.DefaultText = ""
+        Textbox_Username.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
+        Textbox_Username.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
+        Textbox_Username.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Textbox_Username.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
+        Textbox_Username.FillColor = SystemColors.ControlDark
+        Textbox_Username.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Textbox_Username.Font = New Font("Segoe UI", 9F)
+        Textbox_Username.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
+        Textbox_Username.Location = New Point(84, 115)
+        Textbox_Username.Margin = New Padding(3, 4, 3, 4)
+        Textbox_Username.Name = "Textbox_Username"
+        Textbox_Username.PlaceholderForeColor = Color.RosyBrown
+        Textbox_Username.PlaceholderText = "Email or Phone"
+        Textbox_Username.SelectedText = ""
+        Textbox_Username.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        Textbox_Username.Size = New Size(235, 27)
+        Textbox_Username.TabIndex = 1
         ' 
         ' cancel_btn
         ' 
@@ -154,7 +220,7 @@ Partial Class Login
         cancel_btn.Name = "cancel_btn"
         cancel_btn.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         cancel_btn.Size = New Size(73, 33)
-        cancel_btn.TabIndex = 8
+        cancel_btn.TabIndex = 6
         cancel_btn.Text = "Cancel"
         ' 
         ' login_btn
@@ -176,58 +242,13 @@ Partial Class Login
         login_btn.Name = "login_btn"
         login_btn.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         login_btn.Size = New Size(167, 58)
-        login_btn.TabIndex = 7
+        login_btn.TabIndex = 5
         login_btn.Text = "Login"
         ' 
-        ' Guna2TextBox1
+        ' Guna2ShadowForm1
         ' 
-        Guna2TextBox1.BorderColor = SystemColors.ActiveBorder
-        Guna2TextBox1.BorderRadius = 3
-        Guna2TextBox1.BorderThickness = 0
-        Guna2TextBox1.CustomizableEdges = CustomizableEdges3
-        Guna2TextBox1.DefaultText = ""
-        Guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox1.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox1.FillColor = SystemColors.ControlDark
-        Guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Font = New Font("Segoe UI", 9F)
-        Guna2TextBox1.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox1.Location = New Point(84, 115)
-        Guna2TextBox1.Margin = New Padding(3, 4, 3, 4)
-        Guna2TextBox1.Name = "Guna2TextBox1"
-        Guna2TextBox1.PlaceholderForeColor = Color.Coral
-        Guna2TextBox1.PlaceholderText = "Email or Phone"
-        Guna2TextBox1.SelectedText = ""
-        Guna2TextBox1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
-        Guna2TextBox1.Size = New Size(235, 27)
-        Guna2TextBox1.TabIndex = 9
-        ' 
-        ' Guna2TextBox2
-        ' 
-        Guna2TextBox2.BorderColor = SystemColors.ActiveBorder
-        Guna2TextBox2.BorderRadius = 3
-        Guna2TextBox2.BorderThickness = 0
-        Guna2TextBox2.CustomizableEdges = CustomizableEdges1
-        Guna2TextBox2.DefaultText = ""
-        Guna2TextBox2.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        Guna2TextBox2.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        Guna2TextBox2.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox2.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        Guna2TextBox2.FillColor = SystemColors.ControlDark
-        Guna2TextBox2.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox2.Font = New Font("Segoe UI", 9F)
-        Guna2TextBox2.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        Guna2TextBox2.Location = New Point(84, 177)
-        Guna2TextBox2.Margin = New Padding(3, 4, 3, 4)
-        Guna2TextBox2.Name = "Guna2TextBox2"
-        Guna2TextBox2.PlaceholderForeColor = Color.Coral
-        Guna2TextBox2.PlaceholderText = "****"
-        Guna2TextBox2.SelectedText = ""
-        Guna2TextBox2.ShadowDecoration.CustomizableEdges = CustomizableEdges2
-        Guna2TextBox2.Size = New Size(235, 27)
-        Guna2TextBox2.TabIndex = 9
+        Guna2ShadowForm1.ShadowColor = Color.WhiteSmoke
+        Guna2ShadowForm1.TargetForm = Me
         ' 
         ' Login
         ' 
@@ -260,6 +281,8 @@ Partial Class Login
     Friend WithEvents Guna2ShadowPanel1 As Guna.UI2.WinForms.Guna2ShadowPanel
     Friend WithEvents login_btn As Guna.UI2.WinForms.Guna2GradientButton
     Friend WithEvents cancel_btn As Guna.UI2.WinForms.Guna2GradientButton
-    Friend WithEvents Guna2TextBox1 As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents Guna2TextBox2 As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Textbox_Username As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents Textbox_Password As Guna.UI2.WinForms.Guna2TextBox
+    Friend WithEvents show_password As CheckBox
+    Friend WithEvents Guna2ShadowForm1 As Guna.UI2.WinForms.Guna2ShadowForm
 End Class
